@@ -1,0 +1,12 @@
+[Unit]
+Description=rjio-logging
+After=default.target
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/opt/ericsson/enm-configuration/bin/post_vm_startup.sh
+
+[Install]
+WantedBy=default.target
